@@ -1,0 +1,2 @@
+C:\Users\30755\OneDrive\Área de Trabalho\estudos\Cursos\C# cursos\Csharp_cursos\C#_Vitor\Console\Console\obj\Debug\Console.csproj.AssemblyReference.cache
+C:\Users\30755\OneDrive\Área de Trabalho\estudos\Cursos\C# cursos\Csharp_cursos\C#_Vitor\Console\Console\obj\Debug\Console.csproj.CoreCompileInputs.cache
