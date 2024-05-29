@@ -10,6 +10,7 @@ namespace ConsoleApp1
 {
     internal class Program
     {
+        enum Cor { Azul, Amarelo, Preto, Verde, Roxo};
         static void Main(string[] args)
         {
 
@@ -135,35 +136,44 @@ namespace ConsoleApp1
 
             //Swith Case
 
-           /* string cor = "preto";
+            /* string cor = "preto";
 
-            switch (cor)
-            {
-                    case "Vermelho":
-                    Console.WriteLine("Sua cor preferida é vermelho!");
-                    break;
+             switch (cor)
+             {
+                     case "Vermelho":
+                     Console.WriteLine("Sua cor preferida é vermelho!");
+                     break;
 
-                case "Amarelo":
-                    Console.WriteLine("Sua cor preferida é Amarelo!");
-                    break;
-                                                                                // muito útil em casos que exigem muitos cases (casos);
-                case "Verde":
-                    Console.WriteLine("Sua cor preferida é Verde!");
-                    break;
+                 case "Amarelo":
+                     Console.WriteLine("Sua cor preferida é Amarelo!");
+                     break;
+                                                                                 // muito útil em casos que exigem muitos cases (casos);
+                 case "Verde":
+                     Console.WriteLine("Sua cor preferida é Verde!");
+                     break;
 
-                case "Azul":
-                    Console.WriteLine("Sua cor preferida é Azul!");
-                    break;
+                 case "Azul":
+                     Console.WriteLine("Sua cor preferida é Azul!");
+                     break;
 
-                default:
-                    Console.WriteLine("Droga, não sei qual cor que é...");
-                    break;
-            }*/
+                 default:
+                     Console.WriteLine("Droga, não sei qual cor que é...");
+                     break;
+             }*/
 
 
             // Enums
 
             // Um Enum é como um irmão gemêo do var, ele guarda valores ou itens pequenos;
+
+           
+            Cor CorFavoritaGiovana = Cor.Verde;
+            Cor CorFavoritaGuilherme = Cor.Roxo;
+
+            Console.WriteLine((Cor)2);
+            Console.WriteLine((int)CorFavoritaGuilherme);
+            Console.WriteLine((int)CorFavoritaGiovana);
+            
 
             Console.ReadLine();
         }   
