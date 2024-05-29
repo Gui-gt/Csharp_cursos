@@ -117,19 +117,23 @@ namespace ConsoleApp1
             string produto4 = "Dungeos";
             string produto5 = "Need for speed";
 
-            string[] produtos = new string[5] {
-                "Minecraft",
-                "Need For Speed",
-                "Fifa",
-                "Dungeos",
-                "Street Fitgher"
-            };
+            string[] Produtos = new string[5]
 
-            produtos[2] = "FIFA 2024";
+                {   "Minecraft",
+                    "Need For Speed",                   //Assim fica bem melhor e legível
+                    "Fifa", 
+                    "Dungeos",
+                    "Street Fitgher"
+                };
 
-            Console.WriteLine(produtos[2]);
+            Produtos[3] = "Minecraft Dungeos";
+
+            Console.WriteLine(Produtos[3]);
+
+            int[] valores = { 11,22,33,44,55,66 };      // mais simples e organizado;
+
+
             Console.ReadLine();
-           
         }   
         
         static void GerarProduto(int preco, string nome)
