@@ -135,7 +135,7 @@ namespace ConsoleApp1
 
             //Swith Case
 
-            string cor = "preto";
+           /* string cor = "preto";
 
             switch (cor)
             {
@@ -146,7 +146,7 @@ namespace ConsoleApp1
                 case "Amarelo":
                     Console.WriteLine("Sua cor preferida é Amarelo!");
                     break;
-
+                                                                                // muito útil em casos que exigem muitos cases (casos);
                 case "Verde":
                     Console.WriteLine("Sua cor preferida é Verde!");
                     break;
@@ -158,7 +158,12 @@ namespace ConsoleApp1
                 default:
                     Console.WriteLine("Droga, não sei qual cor que é...");
                     break;
-            }
+            }*/
+
+
+            // Enums
+
+            // Um Enum é como um irmão gemêo do var, ele guarda valores ou itens pequenos;
 
             Console.ReadLine();
         }   
