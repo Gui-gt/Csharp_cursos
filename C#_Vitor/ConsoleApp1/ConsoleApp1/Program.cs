@@ -25,15 +25,39 @@ namespace ConsoleApp1
             //existem várias bibliotecas com várias finalidades
             //.NET só é para Windows
 
-            int numeroQualquer = 20 + 20 - 80;
+            /*int numeroQualquer = 20 + 20 - 80;
             int numeroDiv = 6 / 2;
             float numeroX = 5.0f / 2;
 
 
             Console.WriteLine(numeroQualquer);
             Console.WriteLine(numeroDiv);
-            Console.WriteLine(numeroX);
+            Console.WriteLine(numeroX);*/
 
+        //Ordem de precedência
+        /*Primeiro * (MULTIPLICAÇÃO) e / (DIVISÃO)
+        Depois + e -, Porém se ouver (), a ordem mudo e começa por eles.
+        Exemplo:
+
+        n = 2 + 2 * 10 = 22 sem parentêses
+        n = (2 + 2) * 10 = 40 com () */
+
+        //Operadores Aritméticos
+
+        //> < = == >= <= !=
+
+        //Operadores Lógicos
+
+        //(AND e OR) && ||
+
+        int n = 2 + 2 * 10;
+
+        Console.WriteLine();
+
+
+
+
+            //Condicionais em C#
 
             Console.ReadLine();               
         }                                     
