@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -95,17 +97,37 @@ namespace ConsoleApp1
                 Console.WriteLine("que curso show de bola");
             }*/
 
-           // GerarProduto(-20, "Curso de Node JS");
-            
+            // GerarProduto(-20, "Curso de Node JS");
 
-                //string nome =Console.ReadLine(); 
+
+            //string nome =Console.ReadLine(); 
             //Console.WriteLine(nome);
             //Console.ReadLine();
 
-            int soma1 = Somar(1 , 2, 3);
+            // int soma1 = Somar(1 , 2, 3);
 
-            Console.WriteLine(soma1);
+            //Console.WriteLine(soma1);
 
+
+            // Arrays
+
+            string produto1 = "Minecraft";
+            string produto2 = "Call of Duty";
+            string produto3 = "Street Fitgher";      //Para guardar muitos itens isso seria um problema, o mais ideal seria usando um array;
+            string produto4 = "Dungeos";
+            string produto5 = "Need for speed";
+
+            string[] produtos = new string[5] {
+                "Minecraft",
+                "Need For Speed",
+                "Fifa",
+                "Dungeos",
+                "Street Fitgher"
+            };
+
+            produtos[2] = "FIFA 2024";
+
+            Console.WriteLine(produtos[2]);
             Console.ReadLine();
            
         }   
