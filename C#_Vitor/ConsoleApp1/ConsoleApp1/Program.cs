@@ -50,11 +50,11 @@ namespace ConsoleApp1
 
         //(AND e OR) && ||
 
-        int n = 2 + 2 * 10;
-            int num = (2 + 2) * 10;
+        /*int n = 2 + 2 * 10;
+          int num = (2 + 2) * 10;
 
         Console.WriteLine(n);
-            Console.WriteLine(num);
+        Console.WriteLine(num);*/
 
 
 
