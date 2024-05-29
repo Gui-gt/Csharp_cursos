@@ -34,32 +34,46 @@ namespace ConsoleApp1
             Console.WriteLine(numeroDiv);
             Console.WriteLine(numeroX);*/
 
-        //Ordem de precedência
-        /*Primeiro * (MULTIPLICAÇÃO) e / (DIVISÃO)
-        Depois + e -, Porém se ouver (), a ordem mudo e começa por eles.
-        Exemplo:
+            //Ordem de precedência
+            /*Primeiro * (MULTIPLICAÇÃO) e / (DIVISÃO)
+            Depois + e -, Porém se ouver (), a ordem mudo e começa por eles.
+            Exemplo:
 
-        n = 2 + 2 * 10 = 22 sem parentêses
-        n = (2 + 2) * 10 = 40 com () */
+            n = 2 + 2 * 10 = 22 sem parentêses
+            n = (2 + 2) * 10 = 40 com () */
 
-        //Operadores Aritméticos
+            //Operadores Aritméticos
 
-        //> < = == >= <= !=
+            //> < = == >= <= !=
 
-        //Operadores Lógicos
+            //Operadores Lógicos
 
-        //(AND e OR) && ||
+            //(AND e OR) && ||
 
-        /*int n = 2 + 2 * 10;
-          int num = (2 + 2) * 10;
+            /*int n = 2 + 2 * 10;
+              int num = (2 + 2) * 10;
 
-        Console.WriteLine(n);
-        Console.WriteLine(num);*/
-
-
-
+            Console.WriteLine(n);
+            Console.WriteLine(num);*/
 
             //Condicionais em C#
+
+            Console.WriteLine("Digite sua idade");
+            int idade = int.Parse(Console.ReadLine());    
+
+            if(idade >= 0 && idade <= 11)
+            {
+                Console.WriteLine("Voçê é uma criança");
+            }else if(idade  >= 11 && idade <= 18)
+            {
+                Console.WriteLine("Voçê é um adolescente");
+            }else if(idade >= 19 && idade <= 60)
+            {
+                Console.WriteLine("Voçê é um adulto");
+            }else
+            {
+                Console.WriteLine("Voçê é um idoso");
+            }
 
             Console.ReadLine();               
         }                                     
