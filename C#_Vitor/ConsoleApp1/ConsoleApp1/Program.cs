@@ -58,24 +58,55 @@ namespace ConsoleApp1
 
             //Condicionais em C#
 
-            Console.WriteLine("Digite sua idade");
-            int idade = int.Parse(Console.ReadLine());    
+            /* Console.WriteLine("Digite sua idade");
+             int idade = int.Parse(Console.ReadLine());    
 
-            if(idade >= 0 && idade <= 11)
+             if(idade >= 0 && idade <= 11)
+             {
+                 Console.WriteLine("Voçê é uma criança");
+             }else if(idade  >= 11 && idade <= 18)
+             {
+                 Console.WriteLine("Voçê é um adolescente");
+             }else if(idade >= 19 && idade <= 60)
+             {
+                 Console.WriteLine("Voçê é um adulto");
+             }else
+             {
+                 Console.WriteLine("Voçê é um idoso");
+             }*/
+
+
+            //Funçôes em C#
+
+            // Uma função é um método que pode ser chamado no método principal (MAIN):
+            //Por exemplo:
+
+            /*static void Main()
             {
-                Console.WriteLine("Voçê é uma criança");
-            }else if(idade  >= 11 && idade <= 18)
-            {
-                Console.WriteLine("Voçê é um adolescente");
-            }else if(idade >= 19 && idade <= 60)
-            {
-                Console.WriteLine("Voçê é um adulto");
-            }else
-            {
-                Console.WriteLine("Voçê é um idoso");
+                Guilherme(); // Aqui será impresso o que está dentro da função Guilherme 
             }
 
+
+
+            static void Guilherme ()
+            {
+                Console.WriteLine("Seja Bem vindo");
+                Console.WriteLine("Estou aprendendo c#");
+                Console.WriteLine("que curso show de bola");
+            }*/
+
+            GerarProduto(-20, "Curso de Node JS");
+            
+
             Console.ReadLine();               
-        }                                     
+        }   
+        
+        static void GerarProduto(int preco, string nome)
+        {
+            int precoAbs = Math.Abs(preco);
+            int precoFinal = precoAbs + (precoAbs * 2);
+            Console.WriteLine("Nome do Produto: " + nome);
+            Console.WriteLine("Valor do produto: " + precoFinal);
+        }
     }                                         
 }
