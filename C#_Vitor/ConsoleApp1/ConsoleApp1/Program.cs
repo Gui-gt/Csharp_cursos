@@ -95,18 +95,38 @@ namespace ConsoleApp1
                 Console.WriteLine("que curso show de bola");
             }*/
 
-            GerarProduto(-20, "Curso de Node JS");
+           // GerarProduto(-20, "Curso de Node JS");
             
 
-            Console.ReadLine();               
+                //string nome =Console.ReadLine(); 
+            //Console.WriteLine(nome);
+            //Console.ReadLine();
+
+            int soma1 = Somar(1 , 2, 3);
+
+            Console.WriteLine(soma1);
+
+            Console.ReadLine();
+           
         }   
         
         static void GerarProduto(int preco, string nome)
         {
-            int precoAbs = Math.Abs(preco);
+            /*int precoAbs = Math.Abs(preco);
             int precoFinal = precoAbs + (precoAbs * 2);
             Console.WriteLine("Nome do Produto: " + nome);
-            Console.WriteLine("Valor do produto: " + precoFinal);
+            Console.WriteLine("Valor do produto: " + precoFinal);*/
         }
+
+        static int Somar(int a, int b, int c)
+        {
+            Console.WriteLine("a");
+
+            int ResultadoFinal = a + b + c;
+            return ResultadoFinal;
+
+            Console.WriteLine("B");
+        }
+        
     }                                         
 }
