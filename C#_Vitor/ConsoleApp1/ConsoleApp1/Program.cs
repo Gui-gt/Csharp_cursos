@@ -111,7 +111,7 @@ namespace ConsoleApp1
 
             // Arrays
 
-            string produto1 = "Minecraft";
+            /*string produto1 = "Minecraft";
             string produto2 = "Call of Duty";
             string produto3 = "Street Fitgher";      //Para guardar muitos itens isso seria um problema, o mais ideal seria usando um array;
             string produto4 = "Dungeos";
@@ -126,12 +126,39 @@ namespace ConsoleApp1
                     "Street Fitgher"
                 };
 
-            Produtos[3] = "Minecraft Dungeos";
+            Produtos[3] = "Minecraft Dungeos"; // Forma de alterar um item;
 
             Console.WriteLine(Produtos[3]);
 
-            int[] valores = { 11,22,33,44,55,66 };      // mais simples e organizado;
+            int[] valores = { 11,22,33,44,55,66 };      // mais simples e organizado;*/
 
+
+            //Swith Case
+
+            string cor = "preto";
+
+            switch (cor)
+            {
+                    case "Vermelho":
+                    Console.WriteLine("Sua cor preferida é vermelho!");
+                    break;
+
+                case "Amarelo":
+                    Console.WriteLine("Sua cor preferida é Amarelo!");
+                    break;
+
+                case "Verde":
+                    Console.WriteLine("Sua cor preferida é Verde!");
+                    break;
+
+                case "Azul":
+                    Console.WriteLine("Sua cor preferida é Azul!");
+                    break;
+
+                default:
+                    Console.WriteLine("Droga, não sei qual cor que é...");
+                    break;
+            }
 
             Console.ReadLine();
         }   
