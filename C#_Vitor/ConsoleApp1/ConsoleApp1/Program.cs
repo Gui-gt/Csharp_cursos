@@ -231,6 +231,12 @@ namespace ConsoleApp1
                 Console.WriteLine(palavras[c]);    
             }
 
+            for (int contador2 = palavras.Length-1; contador2 > 0; contador2--)
+                {
+
+                Console.WriteLine(palavras[contador2]);
+            }
+
             Console.ReadLine();
         }   
         
