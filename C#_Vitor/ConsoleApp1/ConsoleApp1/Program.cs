@@ -175,36 +175,55 @@ namespace ConsoleApp1
             Console.WriteLine((int)CorFavoritaGuilherme);
             Console.WriteLine((int)CorFavoritaGiovana);*/
 
-            Console.WriteLine("Seleciona uma das opções abaixo: ");
-            Console.WriteLine(" 1-Criar\n 2-Deletar\n 3-Editar\n 4-Listar 5-Atualizar");
+            /* Console.WriteLine("Seleciona uma das opções abaixo: ");
+             Console.WriteLine(" 1-Criar\n 2-Deletar\n 3-Editar\n 4-Listar\n 5-Atualizar");
 
-            int index =int.Parse(Console.ReadLine()); 
-            Opcao opcaoSelecionada = (Opcao)index;
+             int index =int.Parse(Console.ReadLine()); 
+             Opcao opcaoSelecionada = (Opcao)index;
 
-            switch(opcaoSelecionada)
-            {
-                case Opcao.Criar:
-                    Console.WriteLine("Voçê quer criar");
-                    break;
+             switch(opcaoSelecionada)
+             {
+                 case Opcao.Criar:
+                     Console.WriteLine("Voçê quer criar");
+                     break;
 
-                case Opcao.Deletar:
-                    Console.WriteLine("Delete tudo");
-                    break;
+                 case Opcao.Deletar:
+                     Console.WriteLine("Delete tudo");
+                     break;
 
-                case Opcao.Editar:
-                    Console.WriteLine("Editando algo");
-                    break;
-                case Opcao.Listar:
-                    Console.WriteLine("Listando Listas");
-                    break;
-                case Opcao.Atualizar:
-                    Console.WriteLine("Atualizando o sistema");
-                    break;
+                 case Opcao.Editar:
+                     Console.WriteLine("Editando algo");
+                     break;
+                 case Opcao.Listar:
+                     Console.WriteLine("Listando Listas");
+                     break;
+                 case Opcao.Atualizar:
+                     Console.WriteLine("Atualizando o sistema");
+                     break;
+             }
+
+             Console.WriteLine(opcaoSelecionada.ToString());*/
+
+            // Laços de Repetição
+            int contador = 0;
+            while (contador < 10)
+            {   
+                Console.WriteLine("ADD MAIS UM");
+                Console.WriteLine(contador + 1);
+                contador++;
             }
 
-            Console.WriteLine(opcaoSelecionada.ToString());
-            
-            
+            do
+            {
+                Console.WriteLine("Rodou uma vez sendo impossivel");
+            } while (1000 < 1);
+
+            string[] palavras = {"Carro", "Animal", "Naruto", "Anime", "Game" };
+
+            foreach (string palavra in palavras)
+            {
+                Console.WriteLine(palavra);
+            }
 
             Console.ReadLine();
         }   
