@@ -11,6 +11,7 @@ namespace ConsoleApp1
     internal class Program
     {
         enum Cor { Azul, Amarelo, Preto, Verde, Roxo};
+        enum Opcao { Criar = 1, Deletar, Editar, Listar, Atualizar};
         static void Main(string[] args)
         {
 
@@ -166,13 +167,43 @@ namespace ConsoleApp1
 
             // Um Enum é como um irmão gemêo do var, ele guarda valores ou itens pequenos;
 
-           
-            Cor CorFavoritaGiovana = Cor.Verde;
+
+            /*Cor CorFavoritaGiovana = Cor.Verde;
             Cor CorFavoritaGuilherme = Cor.Roxo;
 
             Console.WriteLine((Cor)2);
             Console.WriteLine((int)CorFavoritaGuilherme);
-            Console.WriteLine((int)CorFavoritaGiovana);
+            Console.WriteLine((int)CorFavoritaGiovana);*/
+
+            Console.WriteLine("Seleciona uma das opções abaixo: ");
+            Console.WriteLine(" 1-Criar\n 2-Deletar\n 3-Editar\n 4-Listar\n 5-Atualizar");
+
+            int index =int.Parse(Console.ReadLine()); 
+            Opcao opcaoSelecionada = (Opcao)index;
+
+            switch(opcaoSelecionada)
+            {
+                case Opcao.Criar:
+                    Console.WriteLine("Voçê quer criar");
+                    break;
+
+                case Opcao.Deletar:
+                    Console.WriteLine("Delete tudo");
+                    break;
+
+                case Opcao.Editar:
+                    Console.WriteLine("Editando algo");
+                    break;
+                case Opcao.Listar:
+                    Console.WriteLine("Liste alguma lista");
+                    break;
+                case Opcao.Atualizar:
+                    Console.WriteLine("Atualizando o sistema");
+                    break;
+            }
+
+            Console.WriteLine(opcaoSelecionada.ToString());
+            
             
 
             Console.ReadLine();
