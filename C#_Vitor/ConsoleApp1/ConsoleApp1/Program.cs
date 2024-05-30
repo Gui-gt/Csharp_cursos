@@ -220,9 +220,15 @@ namespace ConsoleApp1
 
             string[] palavras = {"Carro", "Animal", "Naruto", "Anime", "Game" };
 
-            foreach (string palavra in palavras)
+            /*foreach (string palavra in palavras)// para cada palavra(variavel tipo string) no Array Palavras, ele vai executar no bloco de código;
             {
                 Console.WriteLine(palavra);
+            }*/
+
+            for(int c = 0;c < palavras.Length; c++)
+            {
+                Console.WriteLine("rodou for");
+                Console.WriteLine(palavras[c]);    
             }
 
             Console.ReadLine();
