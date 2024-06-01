@@ -256,7 +256,26 @@ namespace ConsoleApp1
             return ResultadoFinal;
 
             Console.WriteLine("B");
+        }using System;
+
+namespace Program
+    {
+        public class Program
+        {
+            static void Main()
+            {
+                Console.WriteLine();
+                float recebe_praca = Praça(250, 350);
+                Console.WriteLine("A base da praça é de " + recebe_praca + " m2");
+            }
+
+            static int Praça(int Base, int altura)
+            {
+                int area = (Base * altura) / 2;
+                return area;
+            }
         }
-        
-    }                                         
+    }
+
+}                                         
 }
