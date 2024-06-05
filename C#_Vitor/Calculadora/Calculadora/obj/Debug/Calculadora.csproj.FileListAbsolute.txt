@@ -1,0 +1,7 @@
+C:\Users\30755\OneDrive\Área de Trabalho\estudos\Cursos\C# cursos\Csharp_cursos\C#_Vitor\Calculadora\Calculadora\bin\Debug\Calculadora.exe.config
+C:\Users\30755\OneDrive\Área de Trabalho\estudos\Cursos\C# cursos\Csharp_cursos\C#_Vitor\Calculadora\Calculadora\bin\Debug\Calculadora.exe
+C:\Users\30755\OneDrive\Área de Trabalho\estudos\Cursos\C# cursos\Csharp_cursos\C#_Vitor\Calculadora\Calculadora\bin\Debug\Calculadora.pdb
+C:\Users\30755\OneDrive\Área de Trabalho\estudos\Cursos\C# cursos\Csharp_cursos\C#_Vitor\Calculadora\Calculadora\obj\Debug\Calculadora.csproj.AssemblyReference.cache
+C:\Users\30755\OneDrive\Área de Trabalho\estudos\Cursos\C# cursos\Csharp_cursos\C#_Vitor\Calculadora\Calculadora\obj\Debug\Calculadora.csproj.CoreCompileInputs.cache
+C:\Users\30755\OneDrive\Área de Trabalho\estudos\Cursos\C# cursos\Csharp_cursos\C#_Vitor\Calculadora\Calculadora\obj\Debug\Calculadora.exe
+C:\Users\30755\OneDrive\Área de Trabalho\estudos\Cursos\C# cursos\Csharp_cursos\C#_Vitor\Calculadora\Calculadora\obj\Debug\Calculadora.pdb

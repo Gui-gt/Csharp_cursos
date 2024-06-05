@@ -1,0 +1,7 @@
+C:\Users\30755\OneDrive\Área de Trabalho\estudos\Cursos\C# cursos\Csharp_cursos\C#_Vitor\MENSAGEM\MENSAGEM\bin\Debug\MENSAGEM.exe.config
+C:\Users\30755\OneDrive\Área de Trabalho\estudos\Cursos\C# cursos\Csharp_cursos\C#_Vitor\MENSAGEM\MENSAGEM\bin\Debug\MENSAGEM.exe
+C:\Users\30755\OneDrive\Área de Trabalho\estudos\Cursos\C# cursos\Csharp_cursos\C#_Vitor\MENSAGEM\MENSAGEM\bin\Debug\MENSAGEM.pdb
+C:\Users\30755\OneDrive\Área de Trabalho\estudos\Cursos\C# cursos\Csharp_cursos\C#_Vitor\MENSAGEM\MENSAGEM\obj\Debug\MENSAGEM.csproj.AssemblyReference.cache
+C:\Users\30755\OneDrive\Área de Trabalho\estudos\Cursos\C# cursos\Csharp_cursos\C#_Vitor\MENSAGEM\MENSAGEM\obj\Debug\MENSAGEM.csproj.CoreCompileInputs.cache
+C:\Users\30755\OneDrive\Área de Trabalho\estudos\Cursos\C# cursos\Csharp_cursos\C#_Vitor\MENSAGEM\MENSAGEM\obj\Debug\MENSAGEM.exe
+C:\Users\30755\OneDrive\Área de Trabalho\estudos\Cursos\C# cursos\Csharp_cursos\C#_Vitor\MENSAGEM\MENSAGEM\obj\Debug\MENSAGEM.pdb
