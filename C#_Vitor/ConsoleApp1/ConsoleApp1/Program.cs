@@ -10,6 +10,22 @@ namespace ConsoleApp1
 {
     internal class Program
     {
+
+        struct Produto
+        {
+            public int peso;
+            public int altura;
+            public string nome;
+
+            public Produto(int peso, int altura, string nome)
+            {
+                this.peso = peso;   
+                this.altura = altura;   
+                this.nome = nome;   
+            }
+        }
+
+
         enum Cor { Azul, Amarelo, Preto, Verde, Roxo};
         enum Opcao { Criar = 1, Deletar, Editar, Listar, Atualizar};
         static void Main(string[] args)
@@ -205,7 +221,7 @@ namespace ConsoleApp1
              Console.WriteLine(opcaoSelecionada.ToString());*/
 
             // Laços de Repetição
-            int contador = 0;
+            /*int contador = 0;
             while (contador < 10)
             {   
                 Console.WriteLine("ADD MAIS UM");
@@ -225,7 +241,7 @@ namespace ConsoleApp1
                 Console.WriteLine(palavra);
             }*/
 
-            for(int c = 0;c < palavras.Length; c++)
+           /* for(int c = 0;c < palavras.Length; c++)
             {
                 Console.WriteLine("rodou for");
                 Console.WriteLine(palavras[c]);    
@@ -237,7 +253,22 @@ namespace ConsoleApp1
                 Console.WriteLine(palavras[contador2]);
             }
 
+            Console.ReadLine();*/
+
+
+            Produto carro = new Produto(2000, 1, "McLaren");
+            Produto moto = new Produto(400, 1, "Kawazaki");
+
+            Console.WriteLine(carro.nome);
+            Console.WriteLine(moto.nome);   
+
             Console.ReadLine();
+
+
+            
+
+
+
         }   
         
         static void GerarProduto(int preco, string nome)
