@@ -13,16 +13,21 @@ namespace ConsoleApp1
 
         struct Produto
         {
-            public int peso;
-            public int altura;
+            public int preco;
+            public string marca;
             public string nome;
 
-            public Produto(int peso, int altura, string nome)
+            public Produto(int preco, string marca, string nome)
             {
-                this.peso = peso;   
-                this.altura = altura;   
-                this.nome = nome;   
+                this.preco = preco;   
+               this.marca = marca;   
+             this.nome = nome;   
             }
+        }
+
+        public void ExibirInfo()
+        {
+            Console.WriteLine($"preco {this.preco}");
         }
 
 
@@ -256,8 +261,8 @@ namespace ConsoleApp1
             Console.ReadLine();*/
 
 
-            Produto carro = new Produto(2000, 1, "McLaren");
-            Produto moto = new Produto(400, 1, "Kawazaki");
+            Produto carro = new Produto(2000, "Carro", "McLaren");
+            Produto moto = new Produto(400, "Moto", "Kawazaki");
 
             Console.WriteLine(carro.nome);
             Console.WriteLine(moto.nome);   
@@ -270,6 +275,15 @@ namespace ConsoleApp1
 
 
         }   
+
+        static void AddCupom(float porc)
+        {
+            float desconto = this.preco * desconto / 100f;
+
+
+            Console.WriteLine();
+
+        }
         
         static void GerarProduto(int preco, string nome)
         {
