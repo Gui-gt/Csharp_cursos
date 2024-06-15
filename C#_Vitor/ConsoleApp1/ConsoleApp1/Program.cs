@@ -24,6 +24,14 @@ namespace ConsoleApp1
                 this.nome = nome;
                 this.marca = marca;
             }
+
+
+            public void ExibirInfo()
+            {
+                Console.WriteLine($"Marca:{this.marca}");
+                Console.WriteLine($"Nome:{this.nome}");
+                Console.WriteLine($"Preço:{this.preco}");
+            }
         }
 
 
@@ -259,11 +267,12 @@ namespace ConsoleApp1
             Console.ReadLine();*/
 
 
-          Produto balde = new Produto(20, "Tapuware", "balde");
-          Produto faca = new Produto(25, "Tramontina", "faca");
+          Produto balde = new Produto(20, "balde", "Tapuware");
+          Produto faca = new Produto(25, "faca", "tramontina");
 
-            Console.WriteLine(balde.nome);
-
+            balde.ExibirInfo();
+            Console.WriteLine("===============");
+            faca.ExibirInfo();
             Console.ReadLine();
 
 
@@ -272,10 +281,7 @@ namespace ConsoleApp1
 
 
         }
-        public void ExibirInfo()
-        {
-            
-        }
+        
 
         static void AddCupom(float porc)
         {
