@@ -13,22 +13,20 @@ namespace ConsoleApp1
 
         struct Produto
         {
-            public int preco;
-            public string marca;
-            public string nome;
+         public  int preco;
+           public string nome;
+           public string marca;
 
-            public Produto(int preco, string marca, string nome)
+
+            public Produto(int preco, string nome, string marca)
             {
-                this.preco = preco;   
-               this.marca = marca;   
-             this.nome = nome;   
+                this.preco = preco;
+                this.nome = nome;
+                this.marca = marca;
             }
         }
 
-        public void ExibirInfo()
-        {
-            Console.WriteLine($"preco {this.preco}");
-        }
+
 
 
         enum Cor { Azul, Amarelo, Preto, Verde, Roxo};
@@ -261,11 +259,10 @@ namespace ConsoleApp1
             Console.ReadLine();*/
 
 
-            Produto carro = new Produto(2000, "Carro", "McLaren");
-            Produto moto = new Produto(400, "Moto", "Kawazaki");
+          Produto balde = new Produto(20, "Tapuware", "balde");
+          Produto faca = new Produto(25, "Tramontina", "faca");
 
-            Console.WriteLine(carro.nome);
-            Console.WriteLine(moto.nome);   
+            Console.WriteLine(balde.nome);
 
             Console.ReadLine();
 
@@ -274,12 +271,15 @@ namespace ConsoleApp1
 
 
 
-        }   
+        }
+        public void ExibirInfo()
+        {
+            
+        }
 
         static void AddCupom(float porc)
         {
-            float desconto = this.preco * desconto / 100f;
-
+            
 
             Console.WriteLine();
 
