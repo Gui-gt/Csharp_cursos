@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class Program
+    public class Program
     {
 
         struct Produto
@@ -18,11 +18,17 @@ namespace ConsoleApp1
            public string marca;
 
 
+
+
             public Produto(int preco, string nome, string marca)
             {
                 this.preco = preco;
                 this.nome = nome;
                 this.marca = marca;
+
+                Teste();
+
+                
             }
 
 
@@ -32,7 +38,22 @@ namespace ConsoleApp1
                 Console.WriteLine($"Nome:{this.nome}");
                 Console.WriteLine($"Preço:{this.preco}");
             }
+
+            public float AddPorcentagem(float porc)
+            {
+
+                
+                 float desconto =  this.preco * porc / 100f;
+                 return this.preco - desconto;
+            }
+
+            public void Teste()
+            {
+                Console.WriteLine("TESTE");
+            }
         }
+
+            
 
 
 
@@ -267,12 +288,17 @@ namespace ConsoleApp1
             Console.ReadLine();*/
 
 
-          Produto balde = new Produto(20, "balde", "Tapuware");
-          Produto faca = new Produto(25, "faca", "tramontina");
+          Produto balde = new Produto(100, "balde", "Tapuware");
+          Produto faca = new Produto(200, "faca", "tramontina");
 
             balde.ExibirInfo();
             Console.WriteLine("===============");
             faca.ExibirInfo();
+
+           float valorFinal =  balde.AddPorcentagem(50f);
+            faca.AddPorcentagem(50f);
+
+            Console.WriteLine(valorFinal);
             Console.ReadLine();
 
 
