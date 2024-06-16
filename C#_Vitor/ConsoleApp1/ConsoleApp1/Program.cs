@@ -11,46 +11,43 @@ namespace ConsoleApp1
     public class Program
     {
 
-        struct Produto
+      struct Produto
         {
-         public  int preco;
-           public string nome;
-           public string marca;
+            public string nome;
+            public string marca;
+            public float preco;
 
 
-
-
-            public Produto(int preco, string nome, string marca)
+            public Produto(string nome, string marca, float preco)
             {
-                this.preco = preco;
                 this.nome = nome;
                 this.marca = marca;
+                this.preco = preco;
 
-                Teste();
+                teste();
 
-                
+
             }
-
 
             public void ExibirInfo()
             {
-                Console.WriteLine($"Marca:{this.marca}");
                 Console.WriteLine($"Nome:{this.nome}");
+                Console.WriteLine($"Marca:{this.marca}");
                 Console.WriteLine($"Preço:{this.preco}");
             }
 
-            public float AddPorcentagem(float porc)
-            {
 
-                
-                 float desconto =  this.preco * porc / 100f;
-                 return this.preco - desconto;
+            public float AddDesconto(float porc)
+            {
+                float desconto = this.preco * porc / 100f;
+                return this.preco - desconto;
             }
 
-            public void Teste()
+            public void teste()
             {
-                Console.WriteLine("TESTE");
+                Console.WriteLine("Teste");
             }
+
         }
 
             
@@ -288,17 +285,19 @@ namespace ConsoleApp1
             Console.ReadLine();*/
 
 
-          Produto balde = new Produto(100, "balde", "Tapuware");
-          Produto faca = new Produto(200, "faca", "tramontina");
 
-            balde.ExibirInfo();
-            Console.WriteLine("===============");
+
+            Produto faca = new Produto("Faca", "Tramontina", 100);
+            Produto balde = new Produto("Balde", "Tapuware", 200);
+
+
+            Console.WriteLine(faca.marca);
+
             faca.ExibirInfo();
-
-           float valorFinal =  balde.AddPorcentagem(50f);
-            faca.AddPorcentagem(50f);
+            float valorFinal = faca.AddDesconto(50f);
 
             Console.WriteLine(valorFinal);
+     
             Console.ReadLine();
 
 
