@@ -288,11 +288,7 @@ namespace ConsoleApp1
 
 
 
-            List<string> clientes = new List<string>();
-            clientes.Add("Guilherme");
-            clientes.Add("Giovana");
-            string pessoa = "Mãe";
-            clientes.Add(pessoa);
+          List<>
 
 
 
