@@ -268,7 +268,7 @@ namespace ConsoleApp1
                  {
 
                  Console.WriteLine(palavras[contador2]);
-             }*/
+             }
 
             Produto faca = new Produto("Tramontina", 100f);
             Produto bola = new Produto("Champios", 200f);
@@ -284,24 +284,35 @@ namespace ConsoleApp1
             string nome = "Guilherme";
             clientes.Add(nome);
 
-            Console.WriteLine($"{clientes[0]} e {nome}");
+            Console.WriteLine($"{clientes[0]} e {nome}");*/
 
+            List<string> clientes = new List<string>();
+            clientes.Add("Guilherme");
+            clientes.Add("Henrique");
+            clientes.Add("Maximo");
+
+            clientes.Count();
+            Console.WriteLine(clientes.Count());
+
+            foreach (string cliente in clientes)
+            {
+                Console.WriteLine(cliente);
+            }
+            Console.WriteLine("========================");    
+            clientes.RemoveAt(0);
+
+           
+
+            foreach (string cliente in clientes)
+            {
+                Console.WriteLine(cliente);
+            }
 
 
 
 
             Console.ReadLine();
-
-
-            
-
-
-
         }
-        
-
-  
-        
         static void GerarProduto(int preco, string nome)
         {
             /*int precoAbs = Math.Abs(preco);
