@@ -11,35 +11,34 @@ namespace ConsoleApp1
     public class Program
     {
 
-      
 
-            
+
+
         struct Produto
         {
-            public float preco;
             public string nome;
+            public float preco;
 
-            public Produto(float preco, string nome)
+
+            public Produto(string nome, float preco) 
             {
-                this.preco = preco;
+                
                 this.nome = nome;
+                this.preco = preco;
             }
 
 
-            public void ExibirInfo()
+            public float AddDesc(float porc)
             {
-                Console.WriteLine($"Preço: {this.preco} $");
-                Console.WriteLine($"Nome: {this.nome}");
-            }
-
-
-            public float AddDesconto(float porc)
-            {
-                float desconto = this.preco * porc/100f;
+                float desconto = this.preco * porc / 100f;
                 return this.preco - desconto;
             }
 
-
+            public void ExibirInfo()
+            {
+                Console.WriteLine($"Nome: {this.nome}");
+                Console.WriteLine($"Preço: {this.preco} $");
+            }
         }
 
 
@@ -269,28 +268,17 @@ namespace ConsoleApp1
                  {
 
                  Console.WriteLine(palavras[contador2]);
-             }
+             }*/
 
-             Console.ReadLine();*/
+            Produto faca = new Produto("Tramontina", 100f);
+            Produto bola = new Produto("Champios", 200f);
 
-            /*Produto faca = new Produto(100f,"Faca");
-             Produto bola = new Produto(200f, "Bola"); 
+            float ValorFinal = bola.AddDesc(50f);
+            Console.WriteLine(ValorFinal);
 
-
-             Console.WriteLine(faca.nome);
-
-             bola.ExibirInfo();
+            faca.ExibirInfo();
 
 
-             float ValorFinal = bola.AddDesconto(50f);
-
-             Console.WriteLine($"ValorFinal: {ValorFinal}"); */
-
-
-            List<string> clientes = new List<string>();
-            clientes.Add("Guilherme");
-            string pessoa = "Giovana";
-            clientes.Add(pessoa);
             
 
 
