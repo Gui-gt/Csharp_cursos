@@ -288,13 +288,7 @@ namespace ConsoleApp1
 
 
 
-            List<string> clientes = new List<string>();
-          
-            clientes.Add("Giovana");
-            string pessoa = "Guilherme";
-            clientes.Add(pessoa);
-            Console.WriteLine($"{clientes[0]} e {clientes[1]}");
-          
+            
 
 
 
