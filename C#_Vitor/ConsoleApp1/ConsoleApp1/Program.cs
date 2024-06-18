@@ -14,7 +14,33 @@ namespace ConsoleApp1
       
 
             
+        struct Produto
+        {
+            public float preco;
+            public string nome;
 
+            public Produto(float preco, string nome)
+            {
+                this.preco = preco;
+                this.nome = nome;
+            }
+
+
+            public void ExibirInfo()
+            {
+                Console.WriteLine($"Preço: {this.preco} $");
+                Console.WriteLine($"Nome: {this.nome}");
+            }
+
+
+            public float AddDesconto(float porc)
+            {
+                float desconto = this.preco * porc/100f;
+                return this.preco - desconto;
+            }
+
+
+        }
 
 
 
@@ -247,12 +273,23 @@ namespace ConsoleApp1
 
             Console.ReadLine();*/
 
-
-
-
-         
+            Produto faca = new Produto(100f,"Faca");
+            Produto bola = new Produto(200f, "Bola"); 
             
-                
+
+            Console.WriteLine(faca.nome);
+
+            bola.ExibirInfo();
+            
+
+            float ValorFinal = bola.AddDesconto(50f);
+
+            Console.WriteLine($"ValorFinal: {ValorFinal}"); 
+
+
+
+
+
             Console.ReadLine();
 
 
