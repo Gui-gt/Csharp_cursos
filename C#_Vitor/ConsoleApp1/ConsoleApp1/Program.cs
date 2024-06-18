@@ -290,6 +290,8 @@ namespace ConsoleApp1
             clientes.Add("Guilherme");
             clientes.Add("Henrique");
             clientes.Add("Maximo");
+            clientes.Add("SANTOS");
+            clientes.Add("DE");
 
             clientes.Count();
             Console.WriteLine(clientes.Count());
@@ -298,10 +300,43 @@ namespace ConsoleApp1
             {
                 Console.WriteLine(cliente);
             }
-            Console.WriteLine("========================");    
+            Console.WriteLine("========================");
+
+
+            Console.WriteLine("===========");
+            string busca = clientes.Find(cliente => cliente.Length > 4);
+
+            Console.WriteLine(busca);
+
+            Console.WriteLine("===========");
+
+
+            Console.WriteLine("====================");
+
+            Console.WriteLine("Filtrando com FindAll");
+
+            List<string> filtragem =clientes.FindAll(cliente  => cliente.Length > 5);
+
+            foreach (string cliente in filtragem)
+            {
+                Console.WriteLine(cliente); 
+            }
+
+         
+            
+
+
+            Console.WriteLine("====================");
             clientes.RemoveAt(0);
 
-           
+            //int quantidadeRemove = clientes.RemoveAll(cliente => cliente == "Maximo");
+
+
+
+          
+
+
+            //Console.WriteLine(quantidadeRemove);
 
             foreach (string cliente in clientes)
             {
