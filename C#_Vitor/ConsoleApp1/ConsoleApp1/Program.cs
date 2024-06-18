@@ -11,44 +11,7 @@ namespace ConsoleApp1
     public class Program
     {
 
-      struct Produto
-        {
-            public string nome;
-            public string marca;
-            public float preco;
-
-
-            public Produto(string nome, string marca, float preco)
-            {
-                this.nome = nome;
-                this.marca = marca;
-                this.preco = preco;
-
-                teste();
-
-
-            }
-
-            public void ExibirInfo()
-            {
-                Console.WriteLine($"Nome:{this.nome}");
-                Console.WriteLine($"Marca:{this.marca}");
-                Console.WriteLine($"Preço:{this.preco}");
-            }
-
-
-            public float AddDesconto(float porc)
-            {
-                float desconto = this.preco * porc / 100f;
-                return this.preco - desconto;
-            }
-
-            public void teste()
-            {
-                Console.WriteLine("Teste");
-            }
-
-        }
+      
 
             
 
@@ -287,17 +250,9 @@ namespace ConsoleApp1
 
 
 
-            Produto faca = new Produto("Faca", "Tramontina", 100);
-            Produto balde = new Produto("Balde", "Tapuware", 200);
-
-
-            Console.WriteLine(faca.marca);
-
-            faca.ExibirInfo();
-            float valorFinal = faca.AddDesconto(50f);
-
-            Console.WriteLine(valorFinal);
-     
+         
+            
+                
             Console.ReadLine();
 
 
@@ -308,13 +263,7 @@ namespace ConsoleApp1
         }
         
 
-        static void AddCupom(float porc)
-        {
-            
-
-            Console.WriteLine();
-
-        }
+  
         
         static void GerarProduto(int preco, string nome)
         {
