@@ -273,7 +273,7 @@ namespace ConsoleApp1
 
             Console.ReadLine();*/
 
-            Produto faca = new Produto(100f,"Faca");
+           /*Produto faca = new Produto(100f,"Faca");
             Produto bola = new Produto(200f, "Bola"); 
             
 
@@ -284,7 +284,15 @@ namespace ConsoleApp1
 
             float ValorFinal = bola.AddDesconto(50f);
 
-            Console.WriteLine($"ValorFinal: {ValorFinal}"); 
+            Console.WriteLine($"ValorFinal: {ValorFinal}"); */
+
+
+
+            List<string> clientes = new List<string>();
+            clientes.Add("Guilherme");
+            clientes.Add("Giovana");
+            string pessoa = "Mãe";
+            clientes.Add(pessoa);
 
 
 
