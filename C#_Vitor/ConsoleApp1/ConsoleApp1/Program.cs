@@ -287,7 +287,10 @@ namespace ConsoleApp1
              Console.WriteLine($"ValorFinal: {ValorFinal}"); */
 
 
-
+            List<string> clientes = new List<string>();
+            clientes.Add("Guilherme");
+            string pessoa = "Giovana";
+            clientes.Add(pessoa);
             
 
 
