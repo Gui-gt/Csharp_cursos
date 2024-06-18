@@ -259,36 +259,42 @@ namespace ConsoleApp1
                 Console.WriteLine(palavra);
             }*/
 
-           /* for(int c = 0;c < palavras.Length; c++)
-            {
-                Console.WriteLine("rodou for");
-                Console.WriteLine(palavras[c]);    
-            }
+            /* for(int c = 0;c < palavras.Length; c++)
+             {
+                 Console.WriteLine("rodou for");
+                 Console.WriteLine(palavras[c]);    
+             }
 
-            for (int contador2 = palavras.Length-1; contador2 > 0; contador2--)
-                {
+             for (int contador2 = palavras.Length-1; contador2 > 0; contador2--)
+                 {
 
-                Console.WriteLine(palavras[contador2]);
-            }
+                 Console.WriteLine(palavras[contador2]);
+             }
 
-            Console.ReadLine();*/
+             Console.ReadLine();*/
 
-           /*Produto faca = new Produto(100f,"Faca");
-            Produto bola = new Produto(200f, "Bola"); 
-            
-
-            Console.WriteLine(faca.nome);
-
-            bola.ExibirInfo();
-            
-
-            float ValorFinal = bola.AddDesconto(50f);
-
-            Console.WriteLine($"ValorFinal: {ValorFinal}"); */
+            /*Produto faca = new Produto(100f,"Faca");
+             Produto bola = new Produto(200f, "Bola"); 
 
 
+             Console.WriteLine(faca.nome);
 
-          List<>
+             bola.ExibirInfo();
+
+
+             float ValorFinal = bola.AddDesconto(50f);
+
+             Console.WriteLine($"ValorFinal: {ValorFinal}"); */
+
+
+
+            List<string> clientes = new List<string>();
+          
+            clientes.Add("Giovana");
+            string pessoa = "Guilherme";
+            clientes.Add(pessoa);
+            Console.WriteLine($"{clientes[0]} e {clientes[1]}");
+          
 
 
 
