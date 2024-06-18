@@ -286,7 +286,7 @@ namespace ConsoleApp1
 
             Console.WriteLine($"{clientes[0]} e {nome}");*/
 
-            List<string> clientes = new List<string>();
+           /* List<string> clientes = new List<string>();
             clientes.Add("Guilherme");
             clientes.Add("Henrique");
             clientes.Add("Maximo");
@@ -322,10 +322,6 @@ namespace ConsoleApp1
                 Console.WriteLine(cliente); 
             }
 
-         
-            
-
-
             Console.WriteLine("====================");
             clientes.RemoveAt(0);
 
@@ -341,10 +337,36 @@ namespace ConsoleApp1
             foreach (string cliente in clientes)
             {
                 Console.WriteLine(cliente);
+            }*/
+
+
+            List<string> clientes = new List<string>();
+            clientes.Add("Guilherme");
+            clientes.Add("Henrique");
+            clientes.Add("Maximo");
+            clientes.Add("dos");
+            clientes.Add("Santos");
+            clientes.Add("Almeida");
+
+            
+            Console.WriteLine(clientes.Count());
+
+
+            clientes.RemoveAt(1);
+            var QuantRemove = clientes.RemoveAll(cliente => cliente == "Guilherme"); 
+
+            Console.WriteLine($"foram removidas {QuantRemove} da lista");
+            
+
+            foreach (string cliente in clientes)
+            {
+                Console.WriteLine(cliente);
             }
+            Console.WriteLine("------------------");
 
+            string buscaName = clientes.Find(cliente => cliente == "Santos");
 
-
+            Console.WriteLine(buscaName);
 
             Console.ReadLine();
         }
@@ -368,3 +390,4 @@ namespace ConsoleApp1
         
     }                                         
 }
+
