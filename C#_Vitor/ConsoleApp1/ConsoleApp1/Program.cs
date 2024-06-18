@@ -279,7 +279,12 @@ namespace ConsoleApp1
             faca.ExibirInfo();
 
 
-            
+            List<string> clientes  = new List<string>();
+            clientes.Add("Giovana");
+            string nome = "Guilherme";
+            clientes.Add(nome);
+
+            Console.WriteLine($"{clientes[0]} e {nome}");
 
 
 
