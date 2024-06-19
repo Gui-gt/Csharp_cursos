@@ -348,25 +348,42 @@ namespace ConsoleApp1
             clientes.Add("Santos");
             clientes.Add("Almeida");
 
-            
+            Console.WriteLine("----------------------");
+            Console.WriteLine("Contando a lista");
             Console.WriteLine(clientes.Count());
-
-
-            clientes.RemoveAt(1);
-            var QuantRemove = clientes.RemoveAll(cliente => cliente == "Guilherme"); 
-
-            Console.WriteLine($"foram removidas {QuantRemove} da lista");
-            
-
+            Console.WriteLine("----------------------");
+            Console.WriteLine("Mostrando todos os clientes");
             foreach (string cliente in clientes)
             {
                 Console.WriteLine(cliente);
             }
-            Console.WriteLine("------------------");
 
-            string buscaName = clientes.Find(cliente => cliente == "Santos");
+            Console.WriteLine("----------------------");
+            Console.WriteLine("Removendo clientes");
+            clientes.RemoveAt(0);//remove um cliente
+            clientes.RemoveAll(cliente => cliente == "Maximo");//remove mais de um
 
-            Console.WriteLine(buscaName);
+            foreach (var cliente in clientes)
+            {
+                Console.WriteLine(cliente);
+            }
+            Console.WriteLine("----------------------");
+
+            Console.WriteLine("Filtrando e buscando");
+
+            string busca = clientes.Find(cliente => cliente == "dos");//buscando um cliente
+
+            Console.WriteLine($"{busca}");
+
+            List<string> filtragem = clientes.FindAll(cliente => cliente.Length > 5);
+
+            foreach (var cliente in filtragem)
+            {
+                Console.WriteLine($"{cliente} (filtrado)");
+            }
+
+           
+
 
             Console.ReadLine();
         }
