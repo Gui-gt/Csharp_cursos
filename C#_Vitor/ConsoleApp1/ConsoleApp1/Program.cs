@@ -10,7 +10,31 @@ namespace ConsoleApp1
 {
     public class Program
     {
+        struct Armas
+        {
+            public string nome;
+            public float preco;
 
+            public Armas(string nome, float preco)
+            {
+                this.nome = nome;
+                this.preco = preco;
+            }
+
+            public void ExibirInfo()
+            {
+                Console.WriteLine($"Nome:{this.nome}");
+                Console.WriteLine($"Preço:{this.preco} $");
+            }
+
+            public float AddDesc(float porcentagem)
+            {
+                float desconto = this.preco * porcentagem / 100f;
+                return this.preco - desconto;
+            }
+
+
+        }
 
 
 
@@ -286,58 +310,58 @@ namespace ConsoleApp1
 
             Console.WriteLine($"{clientes[0]} e {nome}");*/
 
-           /* List<string> clientes = new List<string>();
-            clientes.Add("Guilherme");
-            clientes.Add("Henrique");
-            clientes.Add("Maximo");
-            clientes.Add("SANTOS");
-            clientes.Add("DE");
+            /* List<string> clientes = new List<string>();
+             clientes.Add("Guilherme");
+             clientes.Add("Henrique");
+             clientes.Add("Maximo");
+             clientes.Add("SANTOS");
+             clientes.Add("DE");
 
-            clientes.Count();
-            Console.WriteLine(clientes.Count());
+             clientes.Count();
+             Console.WriteLine(clientes.Count());
 
-            foreach (string cliente in clientes)
-            {
-                Console.WriteLine(cliente);
-            }
-            Console.WriteLine("========================");
-
-
-            Console.WriteLine("===========");
-            string busca = clientes.Find(cliente => cliente.Length > 4);
-
-            Console.WriteLine(busca);
-
-            Console.WriteLine("===========");
+             foreach (string cliente in clientes)
+             {
+                 Console.WriteLine(cliente);
+             }
+             Console.WriteLine("========================");
 
 
-            Console.WriteLine("====================");
+             Console.WriteLine("===========");
+             string busca = clientes.Find(cliente => cliente.Length > 4);
 
-            Console.WriteLine("Filtrando com FindAll");
+             Console.WriteLine(busca);
 
-            List<string> filtragem =clientes.FindAll(cliente  => cliente.Length > 5);
-
-            foreach (string cliente in filtragem)
-            {
-                Console.WriteLine(cliente); 
-            }
-
-            Console.WriteLine("====================");
-            clientes.RemoveAt(0);
-
-            //int quantidadeRemove = clientes.RemoveAll(cliente => cliente == "Maximo");
+             Console.WriteLine("===========");
 
 
+             Console.WriteLine("====================");
 
-          
+             Console.WriteLine("Filtrando com FindAll");
+
+             List<string> filtragem =clientes.FindAll(cliente  => cliente.Length > 5);
+
+             foreach (string cliente in filtragem)
+             {
+                 Console.WriteLine(cliente); 
+             }
+
+             Console.WriteLine("====================");
+             clientes.RemoveAt(0);
+
+             //int quantidadeRemove = clientes.RemoveAll(cliente => cliente == "Maximo");
 
 
-            //Console.WriteLine(quantidadeRemove);
 
-            foreach (string cliente in clientes)
-            {
-                Console.WriteLine(cliente);
-            }*/
+
+
+
+             //Console.WriteLine(quantidadeRemove);
+
+             foreach (string cliente in clientes)
+             {
+                 Console.WriteLine(cliente);
+             }*/
 
 
             /*List<string> clientes = new List<string>();
@@ -383,12 +407,20 @@ namespace ConsoleApp1
             }*/
 
 
-            List<string> clientes = new List<string>();
-            clientes.Add("Giovana");
-            clientes.Add("Guilherme");
-            clientes.Add("Kira");
 
-            Console.WriteLine(clientes[0]);
+            Armas ak47 = new Armas("Ak47", 100f);
+            Armas m416 = new Armas("M416", 200f);
+
+
+            ak47.ExibirInfo();
+            m416.ExibirInfo();
+
+            var preFinal = ak47.AddDesc(50f);
+             var prefi = m416.AddDesc(50f);
+
+            Console.WriteLine(preFinal);
+            Console.WriteLine(prefi);
+            
 
 
 
