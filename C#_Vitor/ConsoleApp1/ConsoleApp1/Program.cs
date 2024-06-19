@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,31 +11,6 @@ namespace ConsoleApp1
 {
     public class Program
     {
-        struct Armas
-        {
-            public string nome;
-            public float preco;
-
-            public Armas(string nome, float preco)
-            {
-                this.nome = nome;
-                this.preco = preco;
-            }
-
-            public void ExibirInfo()
-            {
-                Console.WriteLine($"Nome:{this.nome}");
-                Console.WriteLine($"Preço:{this.preco} $");
-            }
-
-            public float AddDesc(float porcentagem)
-            {
-                float desconto = this.preco * porcentagem / 100f;
-                return this.preco - desconto;
-            }
-
-
-        }
 
 
 
@@ -407,22 +383,58 @@ namespace ConsoleApp1
             }*/
 
 
+            //Manipulação de arquivos em C#
+            //Arquivos TXT: como Html,Cs,Csv (Excel), podem ser lidos normalmente por um humano
+            //Arquivos Binários: como Pdf,jpg,png e mp4, são números e simbolos diferentes que só um reprodutor de tal
+            // é capaz de ler e reproduzir
+            // usando Stream Str = que recebe e manipula o arquivo;
 
-            Armas ak47 = new Armas("Ak47", 100f);
-            Armas m416 = new Armas("M416", 200f);
-
-
-            ak47.ExibirInfo();
-            m416.ExibirInfo();
-
-            var preFinal = ak47.AddDesc(50f);
-             var prefi = m416.AddDesc(50f);
-
-            Console.WriteLine(preFinal);
-            Console.WriteLine(prefi);
+            StreamWriter escritor = new StreamWriter("teste.txt");// desse modo ele imprime as linhas mas se caso apagar uma delas, elas somem junto
             
+            
+            escritor.WriteLine("Curso de C#");
+            escritor.Close();
+
+            Console.WriteLine("Arquivo gerado");
 
 
+            StreamWriter escritorr = File.AppendText("teste.txt");// toda vez que o codigo for executado, vai imprimir uma nova linha e guandando na memória
+            escritorr.WriteLine("Udemy");
+            escritorr.Close();
+
+
+            StreamReader leitor = new StreamReader("teste.txt");
+            /*var conteúdo = leitor.ReadToEnd();
+
+            Console.WriteLine(leitor.ReadLine());
+            Console.WriteLine(leitor.ReadLine());
+            Console.WriteLine(leitor.ReadLine());
+            Console.WriteLine(leitor.ReadLine());
+            Console.WriteLine(leitor.ReadLine());*/
+            List<string> listas = new List<string>(); // lendo cada linha usando uma lista
+            string linha = "";//cria a string linha com null
+
+            while( linha != null ) // enquanto linha for diferente de null, leia
+            {
+                linha = leitor.ReadLine();      //repetidor while
+                if( linha != null )  // se linha for diferente leia
+                {
+                    listas.Add( linha );    //lendo a lista e adcionando mais uma linha
+                }
+                
+            }
+
+            foreach (string nome in listas) // lendo cada linha por vez e printando 
+            {
+                Console.WriteLine(nome);
+            }
+
+            Console.WriteLine(listas[1]); // lendo só a linha desejada
+
+
+            StreamReader lendo = new StreamReader("teste.txt");
+            Console.WriteLine(lendo.ReadLine());
+            Console.WriteLine(lendo.ReadLine());
 
             Console.ReadLine();
         }
