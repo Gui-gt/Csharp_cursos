@@ -432,9 +432,23 @@ namespace ConsoleApp1
             Console.WriteLine(listas[1]); // lendo só a linha desejada
 
 
-            StreamReader lendo = new StreamReader("teste.txt");
-            Console.WriteLine(lendo.ReadLine());
-            Console.WriteLine(lendo.ReadLine());
+            StreamReader lendos = new StreamReader("teste.txt");
+            List<string> lendo = new List<string>();
+            string lendoTd = "";
+
+            while ( lendoTd != null )
+            {
+                lendoTd = lendo.ReadLine();
+                if( lendoTd != null )
+                {
+                    Console.WriteLine($"{lendoTd}");
+                }
+            }
+
+            foreach(string nomi in lendo)
+            {
+                Console.WriteLine(nomi);
+            }
 
             Console.ReadLine();
         }
