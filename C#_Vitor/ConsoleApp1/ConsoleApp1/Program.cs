@@ -340,7 +340,7 @@ namespace ConsoleApp1
             }*/
 
 
-            List<string> clientes = new List<string>();
+            /*List<string> clientes = new List<string>();
             clientes.Add("Guilherme");
             clientes.Add("Henrique");
             clientes.Add("Maximo");
@@ -380,9 +380,16 @@ namespace ConsoleApp1
             foreach (var cliente in filtragem)
             {
                 Console.WriteLine($"{cliente} (filtrado)");
-            }
+            }*/
 
-           
+
+            List<string> clientes = new List<string>();
+            clientes.Add("Giovana");
+            clientes.Add("Guilherme");
+            clientes.Add("Kira");
+
+            Console.WriteLine(clientes[0]);
+
 
 
             Console.ReadLine();
