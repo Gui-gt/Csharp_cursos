@@ -452,7 +452,7 @@ namespace ConsoleApp1
                 Console.WriteLine(nome);
             }
 
-           
+            FileStream STREAM = new FileStream("meuarquivo.Guilherme", FileMode.OpenOrCreate);
 
 
 
