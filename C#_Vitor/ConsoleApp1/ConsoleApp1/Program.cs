@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace ConsoleApp1
 {
@@ -430,7 +431,7 @@ namespace ConsoleApp1
                 Console.WriteLine(nome);
             }
 
-            Console.WriteLine(listas[1]); // lendo só a linha desejada*/
+            Console.WriteLine(listas[1]); // lendo só a linha desejada
 
             StreamReader sr = new StreamReader("teste.txt");
             //Console.WriteLine(sr.ReadToEnd());
@@ -450,9 +451,17 @@ namespace ConsoleApp1
             foreach (var nome in  Linhas)
             {
                 Console.WriteLine(nome);
-            }
+            }*/
 
             FileStream STREAM = new FileStream("meuarquivo.Guilherme", FileMode.OpenOrCreate);
+            BinaryFormatter encoder = new BinaryFormatter();
+
+            encoder.Serialize(STREAM, 120);
+            encoder.Serialize(STREAM, "Guilherme Henrique");
+            encoder.Serialize(STREAM, true);
+
+            STREAM.Close(); 
+
 
 
 
