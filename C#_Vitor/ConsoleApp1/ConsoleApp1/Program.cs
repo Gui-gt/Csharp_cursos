@@ -13,9 +13,17 @@ namespace ConsoleApp1
 {
     public class Program
     {
-
-
-
+        [Serializable]
+        struct cops
+        {
+            public string nome;
+            
+            public cops(string nome)
+            {
+                this.nome = nome;
+            }
+        }
+        
         struct Produto
         {
             public string nome;
@@ -452,30 +460,19 @@ namespace ConsoleApp1
             {
                 Console.WriteLine(nome);
             }*/
+            cops nomee = new cops("Guilherme e Giovana");
 
+            List<string> Listar = new List<string>();
 
+            Listar.Add("gUILHERME");
+            Listar.Add("gIOVANA");
 
-
-            FileStream stream = new FileStream("meuarquivo.Lista", FileMode.OpenOrCreate);
+           FileStream stream = new FileStream("meuarquivo.struct", FileMode.OpenOrCreate);
             BinaryFormatter encoder = new BinaryFormatter();
 
+            encoder.Serialize(stream, nomee);
 
-
-            int idade = 22;
-            string nome = "Giovana";
-            bool v = true;
-
-            encoder.Serialize(stream, nome);
-            encoder.Serialize(stream, idade);
-            encoder.Serialize(stream, v);
-
-            stream.Close(); 
-
-
-
-
-
-
+           
 
             Console.ReadLine();
         }
