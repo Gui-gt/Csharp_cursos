@@ -453,14 +453,23 @@ namespace ConsoleApp1
                 Console.WriteLine(nome);
             }*/
 
-            FileStream STREAM = new FileStream("meuarquivo.Guilherme", FileMode.OpenOrCreate);
+
+
+
+            FileStream stream = new FileStream("meuarquivo.Lista", FileMode.OpenOrCreate);
             BinaryFormatter encoder = new BinaryFormatter();
 
-            encoder.Serialize(STREAM, 120);
-            encoder.Serialize(STREAM, "Guilherme Henrique");
-            encoder.Serialize(STREAM, true);
 
-            STREAM.Close(); 
+
+            int idade = 22;
+            string nome = "Giovana";
+            bool v = true;
+
+            encoder.Serialize(stream, nome);
+            encoder.Serialize(stream, idade);
+            encoder.Serialize(stream, v);
+
+            stream.Close(); 
 
 
 
