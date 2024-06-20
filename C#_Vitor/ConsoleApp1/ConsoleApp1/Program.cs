@@ -390,21 +390,21 @@ namespace ConsoleApp1
             // é capaz de ler e reproduzir
             // usando Stream Str = que recebe e manipula o arquivo;
 
-           /* StreamWriter escritor = new StreamWriter("teste.txt");// desse modo ele imprime as linhas mas se caso apagar uma delas, elas somem junto
-            
-            
-            escritor.WriteLine("Curso de C#");
-            escritor.Close();
-
-            Console.WriteLine("Arquivo gerado");
+            /* StreamWriter escritor = new StreamWriter("teste.txt");// desse modo ele imprime as linhas mas se caso apagar uma delas, elas somem junto
 
 
-            StreamWriter escritorr = File.AppendText("teste.txt");// toda vez que o codigo for executado, vai imprimir uma nova linha e guandando na memória
-            escritorr.WriteLine("Udemy");
-            escritorr.Close();*/
+             escritor.WriteLine("Curso de C#");
+             escritor.Close();
+
+             Console.WriteLine("Arquivo gerado");
 
 
-           // StreamReader leitor = new StreamReader("teste.txt");
+             StreamWriter escritorr = File.AppendText("teste.txt");// toda vez que o codigo for executado, vai imprimir uma nova linha e guandando na memória
+             escritorr.WriteLine("Udemy");
+             escritorr.Close();*/
+
+
+            // StreamReader leitor = new StreamReader("teste.txt");
             /*var conteúdo = leitor.ReadToEnd();
 
             Console.WriteLine(leitor.ReadLine());
@@ -432,25 +432,29 @@ namespace ConsoleApp1
 
             Console.WriteLine(listas[1]); // lendo só a linha desejada*/
 
-            StreamReader leitor = new StreamReader("teste.txt");
-            //Console.WriteLine(leitor.ReadToEnd()); 
-            List<string> linhas = new List<string>();
+            StreamReader sr = new StreamReader("teste.txt");
+            //Console.WriteLine(sr.ReadToEnd());
+
+            List<string> Linhas = new List<string>();
             string lista = "";
 
             while (lista != null)
             {
-                lista = leitor.ReadLine();
+                lista = sr.ReadLine();
                 if(lista != null)
                 {
-                    linhas.Add(lista);   
+                    Linhas.Add(lista);
                 }
-
             }
 
-            foreach (var nome in linhas)
+            foreach (var nome in  Linhas)
             {
                 Console.WriteLine(nome);
             }
+
+           
+
+
 
 
 
