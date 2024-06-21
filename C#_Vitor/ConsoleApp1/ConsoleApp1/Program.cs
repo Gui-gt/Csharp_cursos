@@ -23,7 +23,7 @@ namespace ConsoleApp1
                 this.nome = nome;
             }
         }
-        
+        [Serializable]
         struct Produto
         {
             public string nome;
@@ -461,20 +461,32 @@ namespace ConsoleApp1
                 Console.WriteLine(nome);
             }*/
             cops nomee = new cops("Guilherme e Giovana");
+            Produto faca = new Produto("fACA", 40F);
 
             List<string> Listar = new List<string>();
 
             Listar.Add("gUILHERME");
             Listar.Add("gIOVANA");
 
-           FileStream stream = new FileStream("meuarquivo.struct", FileMode.OpenOrCreate);
+           FileStream stream = new FileStream("meuarquivo.structtt", FileMode.OpenOrCreate);
             BinaryFormatter encoder = new BinaryFormatter();
 
-            encoder.Serialize(stream, nomee);
+            //encoder.Serialize(stream, nomee);
+           // encoder.Serialize(stream, faca);
 
-           
+            List<string> listaDoArquivo = (List<string>) encoder.Deserialize(stream);
+            cops prod = (cops)encoder.Deserialize(stream);
+
+            Console.WriteLine(listaDoArquivo[0]);
+            Console.WriteLine(prod.nome);
+
+
+            stream.Close();
+
 
             Console.ReadLine();
+
+           
         }
         static void GerarProduto(int preco, string nome)
         {
