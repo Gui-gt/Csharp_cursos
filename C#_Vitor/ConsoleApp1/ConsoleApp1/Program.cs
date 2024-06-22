@@ -475,9 +475,9 @@ namespace ConsoleApp1
           FileStream stream = new FileStream("ARQ.gui",FileMode.OpenOrCreate);
             BinaryFormatter codificador = new BinaryFormatter();
 
-           //codificador.Serialize(stream, );
+           codificador.Serialize(stream, fruta);
 
-            List<string> listadoarquivo = (List<String>)codificador.Deserialize(stream);
+            List<string> listadoarquivo = (List<string>)codificador.Deserialize(stream);
             Produtu prod = (Produtu)codificador.Deserialize(stream);
 
             
