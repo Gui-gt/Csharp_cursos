@@ -477,19 +477,71 @@ namespace ConsoleApp1
 
            codificador.Serialize(stream, fruta);
 
-            List<string> listadoarquivo = (List<string>)codificador.Deserialize(stream);
-            Produtu prod = (Produtu)codificador.Deserialize(stream);
-
-            
-            Console.WriteLine(prod.nome);
+            /* List<string> listadoarquivo = (List<String>)codificador.Deserialize(stream);
+             Produtu prod = (Produtu)codificador.Deserialize(stream);
 
 
-            stream.Close(); 
+             Console.WriteLine(prod.nome);
+
+
+             stream.Close(); */
+
+
+            using System;
+            using System.Collections.Generic;
+            using System.Linq;
+            using System.Text;
+            using System.Threading.Tasks;
+            using System.Runtime.Serialization.Formatters.Binary;
+            using System.IO;
+
+namespace ConsoleApp2
+    {
+        internal class Program
+
+
+        {
+
+
+            [System.Serializable]
+            struct Produto
+            {
+                public string nome;
+                public int preco;
+
+
+                public Produto(string nome, int preco)
+                {
+                    this.nome = nome;
+                    this.preco = preco;
+                }
 
 
 
+            }
 
-            Console.ReadLine();
+            static void Main(string[] args)
+            {
+
+                Produto fruta = new Produto("Banana", 20);
+
+                string nome = "Kakaroto";
+
+                FileStream stream = new FileStream("arquivoZZ", FileMode.OpenOrCreate);
+                BinaryFormatter coder = new BinaryFormatter();
+
+                coder.Serialize(stream, nome);
+                coder.Serialize(stream, fruta);
+
+
+                Console.ReadLine();
+
+            }
+        }
+    }
+
+
+    Console.ReadLine();
            
 
            
