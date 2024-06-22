@@ -13,17 +13,19 @@ namespace ConsoleApp1
 {
     public class Program
     {
-        [Serializable]
-        struct cops
+        [System.Serializable]
+            struct Produtu
         {
             public string nome;
-            
-            public cops(string nome)
+            public float preco;
+
+            public Produtu(string nome, float preco)
             {
                 this.nome = nome;
-            }
+                this.preco = preco;
+            } 
         }
-        [Serializable]
+
         struct Produto
         {
             public string nome;
@@ -460,31 +462,35 @@ namespace ConsoleApp1
             {
                 Console.WriteLine(nome);
             }*/
-            cops nomee = new cops("Guilherme e Giovana");
-            Produto faca = new Produto("fACA", 40F);
 
-            List<string> Listar = new List<string>();
+             Produtu fruta = new Produtu("banana", 1000f);
 
-            Listar.Add("gUILHERME");
-            Listar.Add("gIOVANA");
+            string curso = "Curso de c#";
 
-           FileStream stream = new FileStream("meuarquivo.structtt", FileMode.OpenOrCreate);
-            BinaryFormatter encoder = new BinaryFormatter();
+            List<string> Langs = new List<string>();
+            Langs.Add("Java");
+            Langs.Add("c#");
 
-            //encoder.Serialize(stream, nomee);
-           // encoder.Serialize(stream, faca);
 
-            List<string> listaDoArquivo = (List<string>) encoder.Deserialize(stream);
-            cops prod = (cops)encoder.Deserialize(stream);
+          FileStream stream = new FileStream("ARQ.gui",FileMode.OpenOrCreate);
+            BinaryFormatter codificador = new BinaryFormatter();
 
-            Console.WriteLine(listaDoArquivo[0]);
+           //codificador.Serialize(stream, );
+
+            List<string> listadoarquivo = (List<String>)codificador.Deserialize(stream);
+            Produtu prod = (Produtu)codificador.Deserialize(stream);
+
+            
             Console.WriteLine(prod.nome);
 
 
-            stream.Close();
+            stream.Close(); 
+
+
 
 
             Console.ReadLine();
+           
 
            
         }
