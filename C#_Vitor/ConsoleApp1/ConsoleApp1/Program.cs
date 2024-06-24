@@ -490,11 +490,89 @@ namespace ConsoleApp1
 
 
             Console.ReadLine();
-           
 
-           
+            using System;
+            using System.Collections.Generic;
+            using System.Linq;
+            using System.Text;
+            using System.Threading.Tasks;
+            using System.Runtime.Serialization.Formatters.Binary;
+            using System.IO;
+
+namespace ConsoleApp2
+    {
+        internal class Program
+
+
+        {
+            [System.Serializable]
+            struct mozingo
+            {
+                public string nome;
+
+                public mozingo(string nome)
+                {
+                    this.nome = nome;
+                }
+            }
+            static void Main(string[] args)
+            {
+
+
+                //StreamWriter escritor = new StreamWriter("zzzzz.txt");
+
+                //escritor.WriteLine("Eu amo a Giovana mais que tudo <3 !!!!");
+
+                //escritor.Close();
+
+
+                //StreamReader leitor = new StreamReader("zzzzz.txt");
+
+                //Console.Write(leitor.ReadToEnd());
+
+                //leitor.Close();
+
+                //StreamReader leitor = new StreamReader("zzzzz.txt");
+
+                /*List<string> amor = new List<string>();
+
+                string linha = "";
+
+                while(linha != null)
+                {
+                    linha = leitor.ReadLine();
+                    if(linha != null)
+                    {
+                        Console.WriteLine(linha);
+                    }
+                }
+
+                foreach (string nome in amor)
+                {
+                    Console.WriteLine(nome);
+                }*/
+
+
+                mozingo nome = new mozingo("Giovanata");
+                int numero = 9999999;
+
+                FileStream stream = new FileStream("aq.arquivo", FileMode.OpenOrCreate);
+                BinaryFormatter encoder = new BinaryFormatter();
+
+                encoder.Serialize(stream, "EU amo vc Giovana");
+                encoder.Serialize(stream, "000000000000");
+                encoder.Serialize(stream, numero);
+                encoder.Serialize(stream, nome);
+
+                Console.ReadLine();
+
+            }
         }
-        static void GerarProduto(int preco, string nome)
+    }
+
+
+}
+static void GerarProduto(int preco, string nome)
         {
             /*int precoAbs = Math.Abs(preco);
             int precoFinal = precoAbs + (precoAbs * 2);
