@@ -517,6 +517,8 @@ namespace ConsoleApp1
     }
 }
 
+
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -546,25 +548,25 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
 
+            StreamReader leitor = new StreamReader("guigui.txt");
 
-            Langs nome = new Langs("Javascript");
+            List<string> lista = new List<string>();
+            string linha = "";
 
-            FileStream stream = new FileStream("zinco5.guila", FileMode.OpenOrCreate);
-            BinaryFormatter codificador = new BinaryFormatter();
-
-            /*codificador.Serialize(stream, "C_sharp");
-            codificador.Serialize(stream, nome);*/
-
-
-
-
-
-            stream.Close();
-
+            while (linha != null)
+            {
+                linha = leitor.ReadLine();
+                if (linha != null)
+                {
+                    Console.WriteLine(linha);
+                }
+            }
 
 
-
-
+            foreach (string nome in lista)
+            {
+                Console.WriteLine(nome);
+            }
             Console.WriteLine("ARQUIVO GERADO");
 
             Console.ReadLine();
@@ -572,5 +574,3 @@ namespace ConsoleApp2
         }
     }
 }
-
-
