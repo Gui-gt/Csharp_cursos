@@ -514,6 +514,63 @@ namespace ConsoleApp1
             Console.WriteLine("B");
         }
         
-    }                                         
+    }
 }
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+
+namespace ConsoleApp2
+{
+    internal class Program
+
+
+    {
+        [System.Serializable]
+        struct Langs
+        {
+            public string lang;
+
+
+            public Langs(string lang)
+            {
+                this.lang = lang;
+            }
+        }
+
+        static void Main(string[] args)
+        {
+
+
+            Langs nome = new Langs("Javascript");
+
+            FileStream stream = new FileStream("zinco5.guila", FileMode.OpenOrCreate);
+            BinaryFormatter codificador = new BinaryFormatter();
+
+            /*codificador.Serialize(stream, "C_sharp");
+            codificador.Serialize(stream, nome);*/
+
+
+
+
+
+            stream.Close();
+
+
+
+
+
+            Console.WriteLine("ARQUIVO GERADO");
+
+            Console.ReadLine();
+
+        }
+    }
+}
+
 
