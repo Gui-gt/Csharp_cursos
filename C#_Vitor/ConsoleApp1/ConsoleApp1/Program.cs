@@ -490,7 +490,25 @@ namespace ConsoleApp1
 
 
             Console.ReadLine();
+            static void Main(string[] args)
+            {
 
+
+                StreamReader leitor = new StreamReader("guigui.txt");
+
+                Console.WriteLine(leitor.ReadToEnd());
+
+                leitor.Close();
+
+
+
+
+
+                Console.WriteLine("ARQUIVO GERADO");
+
+                Console.ReadLine();
+
+            }
 
 
 
