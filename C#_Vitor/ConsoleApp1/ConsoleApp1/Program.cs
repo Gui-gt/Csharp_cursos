@@ -574,6 +574,7 @@ namespace ConsoleApp2
         }
     }
 }
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -585,43 +586,35 @@ namespace ConsoleApp1
 {
     internal class Program
     {
-
-
-
-        enum menu { listagem = 1, adcionar, remover, sair = 4 };
+        enum Menu { Listar = 1, Adcionar, Remover, Sair };
         static void Main(string[] args)
         {
 
+            bool escolheuSair = false;
 
-            bool escolheusair = false;
-
-            while (!escolheusair)
+            while (!escolheuSair)
             {
-                Console.WriteLine("Gestor de Clientes - Bem vindo!");
-                Console.WriteLine("1-listagem\n2-adcionar\n3-remover\n4-sair");
+                Console.WriteLine("Gestor de clientes - Bem vindo");
+                Console.WriteLine("1 - Listar\n2 -Adcionar\n3 -Remover\n4 -Sair");
                 int intOp = int.Parse(Console.ReadLine());
-                menu opcao = (menu)intOp;
+                Menu opcao = (Menu)intOp;
 
                 switch (opcao)
                 {
-                    case menu.adcionar:
+                    case Menu.Listar:
                         break;
-
-                    case menu.listagem:
+                    case Menu.Adcionar:
                         break;
-
-                    case menu.remover:
+                    case Menu.Remover:
                         break;
-
-                    case menu.sair:
-                        escolheusair = true;
+                    case Menu.Sair:
+                        escolheuSair = true;
                         break;
-
                 }
 
                 Console.Clear();
             }
-
         }
     }
 }
+
