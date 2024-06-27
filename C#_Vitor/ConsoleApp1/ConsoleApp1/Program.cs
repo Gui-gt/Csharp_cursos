@@ -570,7 +570,7 @@ namespace Gestor_de_clientes_Vicitor_Lima
         {
             CLiente cliente = new CLiente();
 
-            Console.WriteLine("Cadastro de clientes");
+            Console.WriteLine("<< Cadastro de clientes >>");
 
             Console.WriteLine("Nome:");
             cliente.nome = Console.ReadLine();
@@ -583,16 +583,17 @@ namespace Gestor_de_clientes_Vicitor_Lima
 
             clientes.Add(cliente);
 
-            Console.WriteLine("Cliente cadastrado com sucesso, aperte enter para voltar ao menu");
+            Console.WriteLine("Cliente cadastrado com sucesso, aperte enter para voltar ao menu.");
 
             Console.ReadLine();
         }
 
         static void Listagem()
         {
-            if (clientes.Count > 0)// caso ser maior que 0, ou seja se tiver um cliente 
+            if (clientes.Count > 0)//se tiver um cliente tá valendo
             {
-                Console.WriteLine("Listagem de clientes");
+                Console.WriteLine("<< Listagem de clientes >>");
+
                 foreach (CLiente cliente in clientes)
                 {
                     int i = 0;
@@ -600,23 +601,19 @@ namespace Gestor_de_clientes_Vicitor_Lima
                     Console.WriteLine($"Nome: {cliente.nome}");
                     Console.WriteLine($"Email: {cliente.email}");
                     Console.WriteLine($"CPF: {cliente.cpf}");
-                    Console.WriteLine("===========================================");
+                    Console.WriteLine("=================================================|");
                     i++;
-
-
                 }
-
-
             }
             else
             {
                 Console.WriteLine("Nenhum cliente cadastrado!");
+                Console.WriteLine("Adicione clientes no menu.");
             }
-            Console.WriteLine("Aperte enter para voltar ao menu");
+            Console.WriteLine("aperte enter para voltar ao menu.");
             Console.ReadLine();
-
-
         }
+
     }
 }
 
