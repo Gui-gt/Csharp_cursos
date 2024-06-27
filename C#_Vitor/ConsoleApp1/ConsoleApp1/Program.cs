@@ -517,5 +517,109 @@ namespace ConsoleApp1
     }
 }
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Gestor_de_clientes_Vicitor_Lima
+{
+    internal class Program
+    {
+
+        struct CLiente
+        {
+            public string nome;
+            public string email;
+            public string cpf;
+        }
+        static List<CLiente> clientes = new List<CLiente>();
+        enum Menu { listagem = 1, adicionar, remover, sair }
+        static void Main(string[] args)
+        {
+            bool escolheuSair = false;
+
+            while (!escolheuSair)
+            {
+
+
+                Console.WriteLine("Gestor de Clientes - Bem vindo");
+                Console.WriteLine("1-listagem\n2-adicionar\n3-remover\n4-sair");
+                int intOp = int.Parse(Console.ReadLine());
+                Menu opcao = (Menu)intOp;
+                switch (opcao)
+                {
+                    case Menu.listagem:
+                        Listagem();
+                        break;
+                    case Menu.adicionar:
+                        Adicionar();
+                        break;
+                    case Menu.remover:
+                        break;
+
+                    case Menu.sair:
+                        escolheuSair = true;
+                        break;
+                }
+                Console.Clear();
+            }
+        }
+        static void Adicionar()
+        {
+            CLiente cliente = new CLiente();
+
+            Console.WriteLine("Cadastro de clientes");
+
+            Console.WriteLine("Nome:");
+            cliente.nome = Console.ReadLine();
+
+            Console.WriteLine("Email:");
+            cliente.email = Console.ReadLine();
+
+            Console.WriteLine("CPF:");
+            cliente.cpf = Console.ReadLine();
+
+            clientes.Add(cliente);
+
+            Console.WriteLine("Cliente cadastrado com sucesso, aperte enter para voltar ao menu");
+
+            Console.ReadLine();
+        }
+
+        static void Listagem()
+        {
+            if (clientes.Count > 0)// caso ser maior que 0, ou seja se tiver um cliente 
+            {
+                Console.WriteLine("Listagem de clientes");
+                foreach (CLiente cliente in clientes)
+                {
+                    int i = 0;
+                    Console.WriteLine($"ID: {i}");
+                    Console.WriteLine($"Nome: {cliente.nome}");
+                    Console.WriteLine($"Email: {cliente.email}");
+                    Console.WriteLine($"CPF: {cliente.cpf}");
+                    Console.WriteLine("===========================================");
+                    i++;
+
+
+                }
+
+
+            }
+            else
+            {
+                Console.WriteLine("Nenhum cliente cadastrado!");
+            }
+            Console.WriteLine("Aperte enter para voltar ao menu");
+            Console.ReadLine();
+
+
+        }
+    }
+}
+
+
 
 
