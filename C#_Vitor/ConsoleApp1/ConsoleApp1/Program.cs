@@ -658,6 +658,32 @@ namespace Gestor_de_clientes_Vicitor_Lima
         }
     }
 }
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Gestor_de_clientes_3._0
+{
+    internal class Program
+    {
+
+        enum Menu { listagem = 1, adicionar, remover, sair};
+
+
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Gestor de Clientes 3.0 - Seja bem vindo");
+            Console.WriteLine("1-listagem\n2-adicionar\n3-remover\n4-sair");
+            int intOp = int.Parse(Console.ReadLine());
+            Menu opcao = (Menu)intOp;
+
+        }
+    }
+}
+
 
 
 
