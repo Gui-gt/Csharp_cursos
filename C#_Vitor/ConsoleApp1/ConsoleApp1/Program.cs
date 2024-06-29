@@ -680,9 +680,213 @@ namespace Gestor_de_clientes_3._0
             int intOp = int.Parse(Console.ReadLine());
             Menu opcao = (Menu)intOp;
 
+            switch (opcao)
+            {
+                
+            
+            }
+
         }
     }
 }
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Gestor_de_clientes_3._0
+{
+    internal class Program
+    {
+        [System.Serializable]
+        struct Cliente
+        {
+            public string nome;
+            public string email;
+            public string cpf;    
+        }
+
+         static List<Cliente> clientes = new List<Cliente>();   
+
+        enum Menu { listagem = 1, adicionar, remover, sair};
+
+
+        static void Main(string[] args)
+        {
+            bool escolheuSair = false;
+
+            while (!escolheuSair)
+            {
+                Console.WriteLine("Gestor de Clientes 3.0 - Seja bem vindo");
+                Console.WriteLine("1-listagem\n2-adicionar\n3-remover\n4-sair");
+                int intOp = int.Parse(Console.ReadLine());
+                Menu opcao = (Menu)intOp;
+
+                switch (opcao)
+                {
+                    case Menu.listagem:
+                        break;
+                    case Menu.adicionar:
+                        adicionar();
+                        break;
+                    case Menu.remover:
+                        break;
+                    case Menu.sair:
+                        escolheuSair = true;
+                        break;
+
+                }
+            }
+        }
+        static void adicionar()
+        {
+            Cliente cliente = new Cliente();
+            Console.WriteLine("Adicionando clientes");
+
+            Console.WriteLine($"Nome: {cliente.nome}");
+
+            Console.WriteLine($"Email: {cliente.email}");
+
+            Console.WriteLine($"CPF: {cliente.cpf}");
+
+            clientes.Add( cliente );
+
+
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Gestor_de_clientes_3._0
+{
+    internal class Program
+    {
+        [System.Serializable]
+        struct Cliente
+        {
+            public string nome;
+            public string email;
+            public string cpf;    
+        }
+
+        static List<Cliente> clientes = new List<Cliente>();   
+
+        enum Menu { listagem = 1, adicionar, remover, sair};
+
+
+        static void Main(string[] args)
+        {
+            bool escolheuSair = false;
+
+            while (!escolheuSair)
+            {
+                Console.WriteLine("Gestor de Clientes 3.0 - Seja bem vindo");
+                Console.WriteLine("1-listagem\n2-adicionar\n3-remover\n4-sair");
+                int intOp = int.Parse(Console.ReadLine());
+                Menu opcao = (Menu)intOp;
+
+                switch (opcao)
+                {
+                    case Menu.listagem:
+                        break;
+                    case Menu.adicionar:
+                        adicionar();
+                        break;
+                    case Menu.remover:
+                        break;
+                    case Menu.sair:
+                        escolheuSair = true;
+                        break;
+
+                }
+            }
+        }
+        static void adicionar()
+        {
+            if(clientes.Count > 0)
+            {
+                Cliente cliente = new Cliente();
+                Console.WriteLine("Adicionando clientes");
+
+                Console.WriteLine($"Nome: {cliente.nome}");
+
+                Console.WriteLine($"Email: {cliente.email}");
+
+                Console.WriteLine($"CPF: {cliente.cpf}");
+
+                clientes.Add(cliente);
+
+                Console.WriteLine("Cliente adicionado com sucesso!");
+            }
+            else
+            {
+                Console.WriteLine("Nenhum cliente cadastrado, adicione clientes no menu");
+                
+            }
+            Console.ReadLine();
+        }
+
+        static void remover()
+        {
+            Console.WriteLine("escolha o id que quer remover:");
+            int id = int.Parse(Console.ReadLine());
+            if(id > 0 && id > clientes.Count)
+            {
+                clientes.RemoveAt(id);
+            }
+            else
+            {
+                Console.WriteLine("número inválido, selecione um id correto!");
+            }
+            Console.ReadLine();
+        }
+
+        static void listagem()
+        {
+            Console.WriteLine("Listage de Clientes");
+            Console.WriteLine($"Nome do Cliente: {}");
+        }
+        static void Salvar()
+        {
+            FileStream stream = new FileStream("dados.teste", FileMode.OpenOrCreate);
+            BinaryFormatter encoder =  new BinaryFormatter();
+
+            encoder.Serialize(stream, clientes);
+
+            stream.Close(); 
+        }
+        static void carregar()
+        {
+            FileStream stream = new FileStream("dados.teste", FileMode.OpenOrCreate);
+
+            try
+            {
+                BinaryFormatter encoder = new BinaryFormatter();
+
+                clientes = (List<Cliente>)encoder.Deserialize(stream);
+
+                if (clientes == null)
+                {
+                    clientes = new List<Cliente>();
+                }
+            }
+            catch (Exception ex)
+            {
+                clientes = new List<Cliente>();
+            }
+            stream.Close();
+        }
+    }
+}
+
+
 
 
 
